@@ -1,0 +1,167 @@
+:root{
+    --very-dark-grayish-glue: hsl(217, 19%, 35%);
+    --desaturated-dark-blue: hsl(214, 17%, 51%);
+    --grayish-blue: hsl(212, 23%, 69%);
+    --light-grayish-blue: hsl(210, 46%, 95%);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ul{
+    list-style-type: none;
+}
+img{
+    max-width: 100%;
+}
+body{
+    font-family: "Manrope", sans-serif;
+    color: var(--very-dark-grayish-glue);
+    background: lightblue;
+    padding: 100px 30px;
+}
+p{
+    font-size: 13px;
+}
+.container{
+    background-color: white;
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+.container .description{
+    padding: 30px;
+}
+
+.container .description h2{
+    font-size: 20px;
+    line-height: 1.4;
+    padding-bottom: 20px;
+}
+
+.container .main-image img{
+    height: 250px;
+    width: 100%;
+    border-radius: 20px 20px 0px 0px;
+}
+.container .avatar{
+    position: relative;
+}
+
+.container .avatar .open-share{
+    background-color: var(--very-dark-grayish-glue);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: all 0.4s ease-in-out;
+    position: absolute;
+    height: 0;
+    overflow: hidden;
+    width: calc(100% + 60px);
+    left: -30px;
+    bottom: -30px;
+    border-radius: 0 0 20px 20px;
+}
+.container .avatar .open-share.clicked{
+    display: none;
+    height: 90px;
+    overflow: auto;
+}
+.container .avatar .open-share.clicked div:first-child{
+    letter-spacing: 7px;
+}
+
+.container .avatar .open-share div{
+    padding: 5px 30px;
+}
+.container .avatar .open-share > div:first-child{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    color: var(--grayish-blue);
+}
+.container .avatar .open-share > div:first-child ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container .avatar .open-share > div:first-child ul li{
+    margin: 0px 10px;
+}
+.container .avatar .open-share #remove-share{
+    cursor: pointer;
+}
+.container .avatar .avatar-img{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.container .avatar .avatar-img .avatar-text{
+    display: flex;
+    align-items: center;
+}
+.container .avatar .avatar-img .avatar-text img{
+    width: 50px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+.container .avatar .avatar-img #share{
+    cursor: pointer;
+}
+.attribution {
+    font-size: 11px;
+    text-align: center;
+  }
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+@media (min-width: 768px){
+    .container{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .container .main-image img{
+        border-radius: 20px 0 0 20px;
+        width: 1000px;
+        height: 100%;
+    }
+
+    .container .avatar .open-share{
+        left: 50%;
+        bottom: 50px;
+        width: 300px;
+        height: 100%;
+        border-radius: 20px;
+        overflow: hidden;
+    }
+    .container .avatar .open-share .triangle-down {
+        position: absolute;
+        left: 50%;
+        /*transform: translateX(-50%);*/
+        transform: translateY(200%);
+        width: 0;
+        height: 0;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        border-top: 15px solid --very-dark-grayish-glue;
+        z-index: 10;
+    }
+}
+
+@media (min-width: 992px){
+    body{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+    }
+    .container{
+        max-width: 800px;
+        margin: auto;
+
+    }
+}
