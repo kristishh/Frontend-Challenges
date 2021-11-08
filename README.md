@@ -10,6 +10,6 @@
   - https://github.com/kristishh/FM-four-card
 * [Base Apparel](https://wizardly-yalow-b76540.netlify.app/)
   - https://github.com/kristishh/FM--base-apparel
-* [Sign-up Form](https://app.netlify.com/sites/gifted-johnson-e2a45e/overview)
+* [Sign-up Form](https://gifted-johnson-e2a45e.netlify.app/)
   - https://github.com/kristishh/FM--Sign_up-Form
 
